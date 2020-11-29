@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Inventory</string>
+    <string name="title_category">Category</string>
+    <string name="title_inventory">Inventory</string>
+    <string name="add_hint">Category name</string>
+    <string name="add_cat_btn">Add Category</string>
+    <string name="cancel_cat_btn">Cancel</string>
+</resources>
