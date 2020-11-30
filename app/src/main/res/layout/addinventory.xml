@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+
+
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/white"
+    android:id="@+id/topBar"
+
+    >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/backarrow"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/backarrow"
+
+        />
+
+    <TextView
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="Back"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/backarrow"
+         />
+
+
+</LinearLayout>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/notes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="7.5dp"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        android:src="@mipmap/milkcarton"
+        android:id="@+id/productImage"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/productImage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/line"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/item_label"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/labelText"/>
+
+
+    <EditText
+        android:id="@+id/description_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_border"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelText"
+
+        android:layout_below="@id/labelText"
+
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/labelText"
+        app:layout_constraintLeft_toLeftOf="@id/description_input"
+        android:text="Description"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7.5dp"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:id="@+id/description"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/description_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/locationLabel"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/locationInput"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/locationInput"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/quantityLayout"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:text="Quantity:"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:id="@+id/quantityText"
+
+            />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationInput"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:background="@drawable/incrementerframe"
+
+        >
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@drawable/incrementerframe"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:textSize="50sp"
+
+        android:id="@+id/decrease"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+
+        />
+    <TextView
+
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/integer_number"
+        android:text="0"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+    <Button
+        android:background="@drawable/incrementerframe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:autoSizeTextType="uniform"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        android:layout_gravity="top"
+
+        android:text="+"
+        android:id="@+id/increase"
+        />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:id="@+id/delete"
+        app:layout_constraintTop_toBottomOf="@id/quantityLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:src="@drawable/deletecan"
+
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/trashCan"
+
+
+
+            />
+        <TextView
+
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+
+            android:text="Delete item"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
